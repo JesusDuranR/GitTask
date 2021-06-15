@@ -72,9 +72,7 @@ Last Principles
 KISS - “Keep It Simple, Stupid”
 KISS programming, in particular, is really important. Try to keep this in mind in your efforts. The simpler your code is, the easier it will be to keep it in the future. This will be greatly appreciated by anyone else who needs to examine your code in the future. The KISS principle was coined by Kelly Johnson, and states that most systems work better if they remain simple rather than complex; therefore, simplicity must be a key goal in the design and unnecessary complexity must be avoided.
 YAGNI - “You Aren’t Gonna Need It”
-A Sometimes, as developers, we try to think about the future, the future of the project, coding some additional features "in case we need them" or thinking "eventually we will need them". Just one word: Wrong! You don’t need it, you don’t need it and in most cases ... "You won’t need it". YAGNI is a principle behind the extreme programming practice (XP) of "Make it as simple as it can work". Even when this principle is part of XP, it is applicable in all types of methodologies and development processes. By implementing the "You won’t need it" programming ideals, you’ll save time and be able to move projects forward efficiently.
+A Sometimes   , as developers, we try to think about the future, the future of the project, coding some additional features "in case we need them" or thinking "eventually we will need them". Just one word: Wrong! You don’t need it, you don’t need it and in most cases ... "You won’t need it". YAGNI is a principle behind the extreme programming practice (XP) of "Make it as simple as it can work". Even when this principle is part of XP, it is applicable in all types of methodologies and development processes. By implementing the "You won’t need it" programming ideals, you’ll save time and be able to move projects forward efficiently.
 
 ------------------------
 LAST DATA 
-------------------------
-MAIN CHANGES
