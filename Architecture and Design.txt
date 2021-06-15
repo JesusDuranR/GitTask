@@ -1,0 +1,75 @@
+SOLID Principles
+SOLID principles are an object-oriented approach that are applied to software structure design. These five principles have changed the world of object-oriented programming, and also changed the way of writing software.
+The word SOLID acronym for:
+•	Single Responsibility Principle (SRP)
+•	Open-Closed Principle (OCP)
+•	Liskov Substitution Principle (LSP)
+•	Interface Segregation Principle (ISP)
+•	Dependency Inversion Principle (DIP)
+Single Responsibility
+On this principle you must respect that a class have only one responsibility, like that you have all the code divided on simple functionalities, and if you want add another, you only must add the other class.
+Open-Closed
+On this principle we simply have the classes open to inheritance, but closed for modifications. If you want to add a functionality for a specific class, you must create a new one but it extends of the principal class.
+Liskov Substitution
+It applies to inheritance in such a way that the derived classes must be completely substitutable for their base classes. In other words, if class A is a subtype of class B, then we should be able to replace B with A without interrupting the behavior of the program. It extends the open-close principle and also focuses on the behavior of a superclass and its subtypes.
+Interface Segregation
+On this principle anyone should never be forced to implement an interface that it doesn’t use, or clients shouldn’t be forced to depend on methods they do not use. It means you must be simple like the first principle, do many interfaces for many functionalities.
+Dependency Inversion
+Entities must depend on abstractions, not on concretions. It states that the high-level module must not depend on the low-level module, but they should depend on abstractions.
+Design Principles Every Programmer Should Know
+DRY
+It means don’t repeat yourself, whit this we don’t have to repeat the same code on two different classes. If we need to use that tow or more times, only we need to call that functionality.
+Encapsulate What Changes
+There is only one thing which is constant in the software field and that is “Change”, So, encapsulate the code you expect or suspect to be changed in future. The benefit of this OOP Design principle is that It’s easy to test and maintain proper encapsulated code.
+Favor Composition over Inheritance
+There are two general ways to reuse the code you have already written, Inheritance and Composition, both have their own advantage and disadvantages, but, in general, you should always favor composition over inheritance, if possible. Some of you may argue this, but I found that Composition is the lot more flexible than Inheritance. Composition allows changing the behavior of a class at run-time by setting property during run-time and by using Interfaces to compose a class we use polymorphism which provides flexibility to replace with better implementation any time.
+Programming for Interface not implementation
+A programmer should always program for the interface and not for implementation this will lead to flexible code which can work with any new implementation of the interface. In concrete words, you should use interface type on variables, return types of a method or argument type of methods in Java like using SuperClass type to store object rather using SubClass.
+Delegation principles
+Don’t do all stuff by yourself, delegate it to the respective class. Classical example of delegation design principle is equals() and hashCode() method in Java. In order to compare two objects for equality, we ask the class itself to do comparison instead of Client class doing that check.
+Model-View-Controller design pattern
+It specifies that an application consist of a data model, presentation information, and control information. The pattern requires that each of these be separated into different objects.
+The model (for example, the data information) contains only the pure application data; it contains no logic describing how to present the data to a user.
+The view (for example, the presentation information) presents the model's data to the user. The view knows how to access the model's data, but it does not know what this data means or what the user can do to manipulate it.
+Finally, the controller (for example, the control information) exists between the view and the model. It listens to events triggered by the view (or another external source) and executes the appropriate reaction to these events. In most cases, the reaction is to call a method on the model. Since the view and the model are connected through a notification mechanism, the result of this action is then automatically reflected in the view.
+Layered Architecture
+Layered architecture is nothing more than dividing our program into layers, and each of them will have one task assigned, none of them should worry about how another does their work, only cares about their work.
+Pattern description
+The layers are composed of components and these are represented horizontally, the layers are vertical. Each layer will have different components and each component has a specific task within the layer. The layers that exists in the pattern are presentation, business, persistence and data base.
+As I said each layer has its function, for example, the presentation has the function of displaying the information to the user, and its components can show different information for each specific function and with this the user interacts to send it to another layer. The database layer is solely responsible for obtaining or sending information between the database and the system. No layer should worry about how the other layer does its job, but should pass on the information it needs.
+Key concepts
+Each of the layers of architecture is marked as closed. This is a very important concept in the layered architecture pattern. A closed layer means that as a request moves from one layer to another, it must go through the layer just below it to get to the next layer below that. For example, a request that originates in the presentation layer must first go through the enterprise layer and then through the persistence layer before finally reaching the database layer.
+When there is an open layer, the layer before this can skip it without problems, which means, if the presentation sends information for the database, but before the last one there is the business one and this can skip it directly without processing the information.
+MVC Architecture
+Model View Controller is a software pattern design, I can be predictable and can be used on many programming languages. It is popularly used to design web applications and mobile applications
+What is MVC Architecture?
+The components of pattern eared signed to manage many different aspects of an application on development. This pattern separates the presentation form the business logic. This models is speared on 3 layers: 
+Model: this layer controls the data storage on the application, an example is the interaction whit a database server, this send or obtains information from the database.
+View: this layer work is being the GUI on the applications, shows the information’s and interact whit the user, doing click on a button, writing text, etc. 
+The controller:  this layer connects the model and view. The controller converts inputs from the view to demands to retrieve/update data in the model. The controller receives input from view, uses logic to translate the input to a demand for the model, the model grabs the data, the controller passes data from the model back to the view for the user to see in a nice display.
+Benefits of MVC
+•	Traditionally used for Graphical user interfaces (GUIs)
+•	Popular in web applications
+•	MVC responsibilities are divided between the client & server, compatible with web application architecture
+•	MVC is helpful design pattern when planning development
+•	Separation of Concerns: that code is divided based on function to either the model, view, or controller bucket
+•	Works well with Ruby on Rails
+•	Loosely Coupled
+•	Removes unnecessary dependencies
+•	Reusable without modification
+•	MVC makes model classes reusable without modification
+•	Code reuse
+•	Extendable code
+•	High Cohesion
+•	Easier to maintain or modify
+•	Supports Multiple views
+•	Each part can be tested independently (Model, view, controller)
+Separation of Concerns
+The MVC design allows for the separation of concerns - dividing the logic between the 3 parts, so that each bucket can act independently. The model, the view, and the controller don’t depend on each other. Why does this matter? Generally, the software is worked by teams - a team can have a designer, engineer and database architect. Separation of concerns means that each team member can work on their piece at the same time, because the logic has been separated into parts. Separation of concerns is also great for maintenance - developers can fix a bug in one piece of code, without having to check the other pieces of code.
+Loosely Coupled
+It means that each piece: the model, the view and the controller, act independently of each other. Developers can modify one of the pieces, and the other 2 pieces must still work and not require modifications. When designing MVC software - the logic in each of the three cubes is independent. Everything in View acts independently of the model - and vice versa, the view will have no logic dependent on the model. Making models and independent views makes code organization simple and easy to understand and keeps maintenance easier. Programmers can fix a view error without changing the model code.
+Last Principles
+KISS - “Keep It Simple, Stupid”
+KISS programming, in particular, is really important. Try to keep this in mind in your efforts. The simpler your code is, the easier it will be to keep it in the future. This will be greatly appreciated by anyone else who needs to examine your code in the future. The KISS principle was coined by Kelly Johnson, and states that most systems work better if they remain simple rather than complex; therefore, simplicity must be a key goal in the design and unnecessary complexity must be avoided.
+YAGNI - “You Aren’t Gonna Need It”
+A Sometimes, as developers, we try to think about the future, the future of the project, coding some additional features "in case we need them" or thinking "eventually we will need them". Just one word: Wrong! You don’t need it, you don’t need it and in most cases ... "You won’t need it". YAGNI is a principle behind the extreme programming practice (XP) of "Make it as simple as it can work". Even when this principle is part of XP, it is applicable in all types of methodologies and development processes. By implementing the "You won’t need it" programming ideals, you’ll save time and be able to move projects forward efficiently.
